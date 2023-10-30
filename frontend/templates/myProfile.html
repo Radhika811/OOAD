@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="icon"
+        href="https://i.imgur.com/G9Fr5ir.png"
+        />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+
+</head>
+<body>
+    <div class="demo-wrap">
+        <div class="img-div">
+        <img
+          class="demo-bg"
+          src="https://en.cryptonomist.ch/wp-content/uploads/2022/06/3ac-crypto-1140x600.jpg"
+          alt=""
+        >
+    </div>
+    <div class="MainContainer">
+        
+        <form class="InputContainer" action="../adminLoggedIn/" method = "post" style="padding-top: 100px;">
+            <img class="profileimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="">
+            {% csrf_token %}
+            <p id="name" class="details">Username   : <b>   {{user.username}}</b></p>
+            <p class="details">Email  :<b> {{user.email}}</b></p>
+            <p class="details">Balance  : <b>  {{user.balance}}</b></p>
+            <p class="details">Role   :   <b>  {{role}}</b></p>
+        </form>
+        <hr width="1px">
+        <table class="table1">
+            <h3>Owned Items</h3>
+        {% for x in items %}
+        <tr>
+        <!-- <td>{{ x.id }}</td>     -->
+        <td>{{ x.item_name }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+    
+    </div>
+</div>
+    
+     
+    
+
+</body>
+</html>

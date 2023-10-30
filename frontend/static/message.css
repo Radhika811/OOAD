@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    /* background-image: url("https://en.cryptonomist.ch/wp-content/uploads/2022/06/3ac-crypto-1140x600.jpg"); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .MainContainer{
+    display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 30vw;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8.5px);
+  color: #FCECB6;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  }
+  h1{
+    margin: 3rem 0 2rem 0;
+  }
+
+  .InputContainer{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  }
+
+  .input{
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(255, 220, 144, 0.37);
+    border-radius: 2rem;
+    width: 80%;
+    height: 3rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    color: #FCECB6;
+    font-size: 1rem;
+    font-weight: bold;
+   
+  }
+  input:focus {
+    display: inline-block;
+    box-shadow: 0 0 0 0.2rem #FCECB6;
+    backdrop-filter: blur(12rem);
+    border-radius: 2rem;
+  }
+  input::placeholder {
+    color: #d3d3d3;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  .ButtonContainer{
+    margin: 1rem 0 2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button{
+    /* background: linear-gradient(to right, maroon  0%, #FCECB6 79%); */
+    background: #FCECB6 ;
+
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  width: 65%;
+  height: 3rem;
+  border: none;
+  color: black;
+  border-radius: 2rem;
+  cursor: pointer;
+  }
+
+  .register{
+    width: 300px;
+    background-color: rgb(252, 236, 182,0.5);
+    border-radius: 30px;
+    margin: 100px 0px 20px 0px;
+    padding: 4px 20px;
+    width:fit-content
+  }
+
+  .register p{
+    color: black;
+    text-transform: none;
+    letter-spacing: 0;
+   
+  }
+
+  .register a{
+    text-transform: none;
+    /* font-family: sans-serif; */
+    letter-spacing: 0;
+  }
+
+  .demo-bg {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  #rusername{
+    margin-top: 150px;
+  }
+  #areyou{
+    margin-top: 250px;
+  }
+  #Adminme{
+    margin-top: 0;
+  }

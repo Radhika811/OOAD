@@ -1,0 +1,47 @@
+body{
+    background-image:url("https://en.cryptonomist.ch/wp-content/uploads/2022/06/3ac-crypto-1140x600.jpg");
+    background-size: cover;
+    color:aliceblue;
+}
+
+#Cryptocurrency-chart{
+    height: 200%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #FCECB6;
+}
+
+hr{
+    color: #FCECB6;
+}
+
+#info{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #FCECB6;
+
+}
+
+#container{
+    background-color: rgba(0,0,0,0.6) ;
+    border-radius: 20px;
+}
+
+#contain{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #FCECB6;
+    padding: 10vh;
+}
+
+#contain input{
+    background-color: rgba(0,0,0,0.6);
+    border : 1px solid #FCECB6;
+    color: #FCECB6;
+    height:4vh;
+    width: 10vw;
+    border-radius: 20px;
+}

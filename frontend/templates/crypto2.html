@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="icon"
+        href="https://i.imgur.com/G9Fr5ir.png"
+        />
+    <link rel="stylesheet" href="{% static 'crypto.css' %}">
+    <title>CryptoCurrency Convertor</title>
+    
+</head>
+<body>
+    <h1>Check the Latest CryptoCurrency prices </h1><hr>
+    <div id="info">
+        Bitcoin Price = {{price_1}} USD</br>
+        Ethereum Price = {{price_2}} USD</br>
+        Rupee Price= 0.012 USD
+    </div>
+    
+    <div id="contain">
+    CONVERTER (TO INR): <br><br>
+    <form action ="../balanceUpdate/" method="post">
+      {% csrf_token %}
+      <input type="number" name="price" value= '{{ price_1 }}' style="display:none;">
+      <input type="number" id="bitcoins" name="bitcoins" placeholder="Enter number of Bitcoins">
+      <input type="text" id="name" name="username" value='{{username}}' style="display:none;">
+      <input type="submit" value="IMPORT">
+  </form>
+  <br>
+  <form action ="../balanceUpdate/" method="post">
+      {% csrf_token %}
+      <input type="number" name="price" value= '{{ price_2 }}' style="display:none;">
+      <input type="number" id="bitcoins" name="bitcoins" placeholder="Enter number of Ethereum">
+      <input type="text" id="name" name="username" value='{{username}}' style="display:none;">
+      <input type="submit" value="IMPORT">
+  </form>
+</div>
+</body>
+</html>

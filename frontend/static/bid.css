@@ -1,0 +1,111 @@
+body, html {
+    background-image: url("https://i.imgur.com/tNte8v1.jpg");;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  .bg-text {
+    color:#FCECB6;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+  }
+
+h1{
+    text-align:center;
+    padding-top: 20vh;
+}
+
+table{
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 30px;
+    position:center;
+    margin-top:10px;
+    text-align:center;
+    width : 65%;
+    border-color:#FCECB6;
+}
+
+td,th {
+    padding:50px;
+    border-width: 20px;
+    border-color: transparent;
+    border-bottom: 1px solid #FCECB6;
+}
+
+.text-box{
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8.5px);
+  color: #FCECB6;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.input{
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(255, 220, 144, 0.37);
+  border-radius: 5px;
+  width: 12rem;
+  height: 2rem;
+  margin: 8px;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: #FCECB6;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+ 
+}
+
+.button{
+  background-color: transparent;
+  color: #FCECBe;
+  border: 2px solid #FCECBe;
+  height: 2em;
+  width: 8em;
+  cursor:pointer;
+  font-family: 'Kanit', sans-serif;
+  border-radius: 20px;
+  padding-top: 4px ;
+}
+
+.button:hover{
+  color:black;
+  background-color:#FCECBe;
+
+}
+
+.homeimg{
+  border: 5px groove #FCECBe;
+  width:100px;
+}
+
+#additem{
+  float: right;
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+
+
+

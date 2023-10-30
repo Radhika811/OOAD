@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="icon"
+        href="https://i.imgur.com/G9Fr5ir.png"
+        />
+    <title>Message</title>
+    <link rel="stylesheet" href="{% static 'message.css' %}">
+</head>
+<body>
+    <div class="demo-wrap">
+        <img
+          class="demo-bg"
+          src="https://en.cryptonomist.ch/wp-content/uploads/2022/06/3ac-crypto-1140x600.jpg"
+          alt=""
+        >
+        <div class="MainContainer" style="height: 170px;">
+        <h1 class="SigninText">{{message}}</h1>
+        </div>
+    </div>
+    
+</body>
+</html>

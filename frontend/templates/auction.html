@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Items</title>
+    <link rel="stylesheet" href="{% static 'bid.css' %}">
+    <link
+        rel="icon"
+        href="https://i.imgur.com/G9Fr5ir.png"
+        />
+    {% comment %} <script>
+        $(function autoRefresh() {
+            window.location = window.location.href;
+          }
+          setInterval('autoRefresh()',500););
+    </script> {% endcomment %}
+</head>
+    
+<body>
+    <div class="bg-text">
+        {% for x in items %}
+        <div id="pad" style="padding:18vh;"><br></div>
+        {% endfor %}
+        <h1>AUCTION ITEMS LIST</h1>
+        <form class="InputContainer" action="../addItem/" method = "post" >
+            {% csrf_token %}
+                <input type="text" name="username" value= '{{ current_username }}' style="display:none;">
+            <div class="ButtonContainer" style="margin-top: 32px;">
+                <button class="button" id="additem" type="submit">ADD ITEM</button>
+            </div>       
+        </form>
+        <center>
+        <table >
+        <tr>
+             <th>Item Image </th>
+             <th>Item Name </th>
+             <th>description</th>
+             <th>Current Bid </th>
+             <th>Owner </th>
+             <th>Highest Bidder </th>
+             <th>Update Bid </th>
+             <th>Timer </th>
+        </tr>
+        
+        {% for x in items %}
+        <tr>
+        <td><div class="homeimg">
+            <img
+                width='100%'
+                height='100'
+                src= {{ x.item_picture }}
+                onerror="if (this.src != 'https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg') this.src = 'https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg';"
+                alt='why man why?'/>
+        </div></td>
+        <td>{{ x.item_name }}</td>
+        <td>{{ x.item_descr}}</td>
+        <td>{{ x.highest_bid }}</td>
+        <td>{{ x.owner_username }}</td>
+        <td>{{ x.highest_bidder_username }}</td>
+        <td>
+                <form action ="../bidUpdate/" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="username" value= '{{ current_username }}' style="display:none;">
+                    <label for=""> Enter your bid</label>
+                    <input class="input" type="number" id="bid" name="bid" placeholder="Enter Bid">
+                    <input type="text" id="item_name" name="item_name" value='{{x.item_name}}' style="display:none;">
+                    <input type="number" id="item_id" name="item_id" value='{{x.id}}' style="display:none;" >
+                    <input class="button" type="submit" value="SEND BID">
+                </form>
+        </td>
+        <td>
+            {{x.hours}}H {{x.minutes}}M
+        </td>
+        </tr>
+        {% endfor %}
+</table>
+</center>
+</div>
+<div>
+    <img src="https://i.imgur.com/tNte8v1.jpg" style="display:none">
+</div>
+</body>
+</html>

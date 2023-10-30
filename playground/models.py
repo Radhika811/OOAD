@@ -41,7 +41,7 @@ class Bids(models.Model):
     # users = models.ManyToManyField(Users)
     # amounts = models.ManyToManyField(Amount)
     user_amounts = models.JSONField()
-    item = models.ForeignKey(Items)
+    item = models.ForeignKey(Items, on_delete=models.CASCADE)
     time = models.DateTimeField(auto_now_add=True)
 
 class Category(models.Model):

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Requests</title>
+        <link
+        rel="icon"
+        href="https://i.imgur.com/G9Fr5ir.png"
+        />
+        <link rel="stylesheet" href="{% static 'req.css' %}">
+
+    </head>
+    <body style="background-image: url('https://i.imgur.com/tNte8v1.jpg');">
+        <div class="bg-text">
+
+        
+        <h1>ITEM REQUESTS</h1>
+
+<table >
+    <tr>  
+        <th>ITEM NAME</th>
+        <th>OWNER</th>
+        <th>DESCRIPTION</th>
+        <th></th>
+        <th></th>
+        
+            </tr>
+{% for x in items %}
+
+    <tr>
+<td>{{ x.item_name }}</td>
+<td>{{ x.owner_username }}</td>
+<td>{{ x.item_descr }}</td>
+<td>
+    <form action ="../bidAccept/" method="post">
+        {% csrf_token %}
+          <input type="text" id="item_name" name="item_name" value='{{x.item_name}}' style="display:none;">
+          <input type="number" id="item_id" name="item_id" value='{{x.id}}' style="display:none;" >
+          <input type="submit" value="ACCEPT">
+      </form>
+</td>
+<td>
+    <form action ="../bidReject/" method="post">
+        {% csrf_token %}
+          <input type="text" id="item_name" name="item_name" value='{{x.item_name}}' style="display:none;">
+          <input type="number" id="item_id" name="item_id" value='{{x.id}}' style="display:none;" >
+          <input type="submit" value="REJECT">
+      </form>
+</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+<div>
+    <img src="https://i.imgur.com/tNte8v1.jpg" style="display:none">
+</div>
+    </body>
+    </html>

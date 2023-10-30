@@ -1,0 +1,129 @@
+body{
+  background-image: url("https://en.cryptonomist.ch/wp-content/uploads/2022/06/3ac-crypto-1140x600.jpg");
+  background-size: cover;
+  padding:0%;
+  margin: 0%;
+}
+header{
+padding:20px;
+}
+.homey{
+  display: grid;
+  width: 80%;
+  grid-template-columns: 2fr 1fr;
+  padding:0vh 4vw 2vh 10vw;
+  color:white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.logo{
+  z-index: 2;
+}
+.logo img{
+  height: 5rem;
+}
+.heading{
+  padding: 0vh 0vw 0vh 5vw;
+  margin:20vh 0 0 0;
+  font-size: 80px;
+  color: #FCECB6;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.nav{
+  color : grey;
+  display : flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap :  2 rem;
+  padding : 0 1rem;
+  float: right;
+}
+.rightside{
+  float : right;
+  text-decoration: none;
+  text-align: center;
+}
+.nav ul{
+  float : right;
+  margin : 0;
+  list-style: none;
+  display : flex;
+  gap : 1rem;
+}
+
+.nav form input{
+  color : inherit;
+  height : 100%;
+  display : flex;
+  align-items: center;
+  font-family: 'Kanit', sans-serif;
+  padding : .26rem;
+  font-size: large;
+  text-decoration: none;
+  background-color: transparent;
+  border:none;
+  margin-top: 0.5rem;
+}
+
+.nav a {
+  color : inherit;
+  height : 100%;
+  align-items: center;
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+.nav li:active{
+  background-color: gray;
+}
+.nav li:hover{
+  color: yellow;
+}
+
+#buttonStart button{
+  text-align: center;
+}
+
+#buttonStart button{
+  background-color: transparent;
+  color: #FCECB6;
+  border: 2px solid #FCECB6;
+  height: 10vh;
+  width: 10vw;
+  cursor:pointer;
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+#buttonStart button:hover{
+  color:black;
+  background-color: #FCECB6;
+}
+
+#ConFoot{
+  padding: 0vh 10vw 0vh 0vw;
+  font-size: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#sm>h1{
+  padding: 0;
+  margin: 0;
+  font-size: 2vh;
+  font-family: 'Nunito Sans', sans-serif;
+}
+#sm{
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  background-color: black;
+  text-align: center;
+  color: aliceblue;
+  padding: 15px 0 20px 0;
+  margin: 15vh 0px 0px 0px;
+}
+.contacts img{
+  height:3em;
+  width:3em;
+}

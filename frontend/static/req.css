@@ -1,0 +1,70 @@
+body {
+    background-image: url("https://i.imgur.com/tNte8v1.jpg");
+    background-size: cover;
+    background-position: fixed;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  h1{
+    text-align:center;
+    padding-top: 20vh;
+}
+
+.bg-text {
+    color:#FCECB6;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  table{
+    margin-left: auto;
+  margin-right: auto;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 30px;
+    /* alignment:justify; */
+    position:center;
+    margin-top:10px;
+    text-align:center;
+    width : 65%;
+    border-color:#FCECB6;
+}
+
+td,th {
+    padding:10px;
+    border-width: 20px;
+    border-color: transparent;
+}
+th{
+    border-bottom: 1px solid #FCECB6;
+}
+
+form input{
+  background-color: transparent;
+  border: 1px solid #FCECB6;
+  font-family: 'Kanit', sans-serif;
+  border-radius: 20px;
+  color: #FCECB6;
+}
+
+form input:hover{
+  background-color: transparent;
+  border: 1px solid #FCECB6;
+  font-family: 'Kanit', sans-serif;
+  border-radius: 20px;
+  color: black;
+  background-color: #FCECB6;
+}
